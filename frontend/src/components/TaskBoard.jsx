@@ -3,7 +3,7 @@ import { format, parseISO } from 'date-fns';
 import { Plus, MoreVertical, Calendar, Flag, Check, Clock, Edit2, Trash2 } from 'lucide-react';
 import TaskForm from './TaskForm';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_URL ? (import.meta.env.VITE_API_URL + '/api') : (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api');
 
 export default function TaskBoard({ tasks, categories, refreshAll }) {
   const [isFormOpen, setIsFormOpen] = useState(false);
