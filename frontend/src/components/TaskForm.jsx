@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
-const API_BASE = import.meta.env.VITE_API_URL ? (import.meta.env.VITE_API_URL + '/api') : (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api');
+const API_BASE = import.meta.env.VITE_API_URL ? (import.meta.env.VITE_API_URL + '/api') : (import.meta.env.DEV ? 'http://localhost:3001/api' : '/api');
 
 export default function TaskForm({ task, categories, onClose, onSuccess }) {
   const [formData, setFormData] = useState({

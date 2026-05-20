@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import TaskBoard from './components/TaskBoard';
 
-const API_BASE = import.meta.env.VITE_API_URL ? (import.meta.env.VITE_API_URL + '/api') : (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api');
+const API_BASE = import.meta.env.VITE_API_URL ? (import.meta.env.VITE_API_URL + '/api') : (import.meta.env.DEV ? 'http://localhost:3001/api' : '/api');
 
 function App() {
   const [tasks, setTasks] = useState([]);
